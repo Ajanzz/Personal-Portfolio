@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajan Balaganesh Personal Website</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src="https://kit.fontawesome.com/bb332b9d67.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+<!--Header Section-->
+<div id="header">
+    <div class = "container">
+        <nav>
+            <img src = "images/Ajan_Balaganesh-removebg-preview.png" class = "logo">
+            <ul id = "sidemenu">
+                <li><a href = "#header" >Home</a></li>
+                <li><a href = "#about" >About</a></li>
+                <li><a href = "#portfolio" >Portfolio</a></li>
+                <li><a href = "#contact" >Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick = "closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class = "header-text">
+            <p>Hello, I am Ajan &#128075;</p>
+            <h1>Feel free to browse my digital portfolio!</h1>
+        </div>
+
+    </div>
+</div>
+<!--About Section-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h1 class = "sub-title">About Me &#128075;</h1>
+                <p>Welcome to my digital portfolio, I'm currently pursuing a Bachelor's degree in Software Engineering at Carleton University. I enjoy bringing my ideas to life through programming. With a passion for technology, a drive for innovation, and a commitment to continuous learning, I am excited to contribute to the ever-evolving landscape of software engineering. Below you can find my technical skills as well as my resume which can be downloaded with a simple click of the resume button down below.</p>
+                <div class = "tab-titles">
+                    <p class = "tab-links active-link" onclick = "opentab('skills')">Skills &#128378;</p>
+                    <p class = "tab-links" onclick = "opentab('work experience')">Work Experience &#128188;</p>
+                    <p class = "tab-links" onclick = "opentab('education')">Education &#128218;</p>
+                </div>
+                <div class="tab-contents active-tab" id = "skills">
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>React.Js</li>
+                        <li>Node.Js</li>
+                        <li>Express.Js</li>
+                        <li>Angular</li>
+                        <li>Java Swing</li>
+                        <li>OOP</li>
+                        
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "work experience">
+                    <ul>
+                        <li><span>2024-Present</span><br>Software Engineer at Carleton University</li>
+                        <li><span>2023-Present</span><br>Private Programming and Math Tutor</li>
+                        <li><span>2023-2024</span><br>Mcdonald's Crew Member</li>
+                    </ul>
+                </div>
+                <div class ="tab-contents" id = "education">
+                    <ul>
+                        <li><span>2023-Present</span><br>BEng Software Engineering at Carleton University</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+
+        </div>
+        
+    </div>
+</div>
+<a href="images/V15 Ajan-Balaganesh resume.docx (1).pdf" download><img src="images/—Pngtree—vector resume icon_4272182.png" alt="Resume Icon" class = "resume-icon"></a>
+
+<!--Portfolio Section-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class = "sub-title">Personal Portfolio &#128188;</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src = "images/close-up-woman-typing-laptop.jpg">
+                <div class="layer">
+                    <h3>Touch Typing Application</h3>
+                    <p>An application that helps its users improve their typing speed and accuracy by progressing through multiple levels of typing challenges. </p>
+                    <a href="https://github.com/Ajanzz/Touch-Typing-Application"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+            </div>
+            <div class="work">
+                <img src = "images/images (1).png">
+                <div class="layer">
+                    <h3>Personal Website</h3>
+                    <p>A responsive website created using HTML, CSS and JavaScript displaying work-relevant details and personal projects. </p>
+                    <a href="https://github.com/Ajanzz/Personal-Portfolio"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+            </div>
+            <div class="work">
+                <img src = "images/task_managed.png">
+                <div class="layer">
+                    <h3>Task Management Application</h3>
+                    <p>Full-stack application with a React.js front end and an Express.js backend efficiently interacting with a MongoDB database through Mongoose allowing for users to create, read and update tasks.(Still a work in progress)</p>
+                    
+                </div>
+
+            </div>
+           
+        </div>
+    </div>
+</div>
+<!--Contact Section-->
+<div id="contact">
+    <div class = "container">
+        <h1 class = "sub-title">Contact Me &#128222;</h1>
+        <div class = "contact-list">
+            <a href="https://www.linkedin.com/in/ajan-balaganesh/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:ajanbganesh@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.instagram.com/_ajan.b/"><i class="fa-brands fa-instagram"></i></a>
+
+        </div>
+    </div>
+</div>
+
+<!--Script for skills, work experience and education subsections in about section-->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+<!--Script for the side menu to implement reactivity-->
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+
+    }
+</script>
+</body>
+</html>
