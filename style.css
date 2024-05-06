@@ -63,7 +63,7 @@ nav ul li a:hover::after{
     margin-top: 10%;
     font-size: 40px;
     border-right: 5px solid transparent;
-    width: 64%;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     animation:
